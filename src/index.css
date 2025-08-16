@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.quotation-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.print-container {
+  background: white;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-container {
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+  }
+}
