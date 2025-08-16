@@ -419,26 +419,41 @@ const QuotationForm = ({ addQuotation, quotations, updateQuotation }) => {
         <div className="border border-black p-6 flex flex-col items-end gap-2 w-full relative">
           {/* Small left-side box as in the image */}
           <div
-            className="absolute left-0 top-0 m-4"
+            className="absolute left-2 top-2 transform -translate-x-2 m-2 flex items-left justify-center"
             style={{
               border: '2px solid black',
-              padding: '6px 18px 6px 10px',
               background: 'white',
               fontSize: '0.95rem',
               minWidth: 210,
               maxWidth: 260,
-              lineHeight: 1.25,
+              height: 70, // fixed height for vertical centering, adjust as needed
               fontWeight: 500,
               letterSpacing: 0.1,
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              padding: 0, // remove padding so centering is accurate
             }}
           >
-            <div>
-              <span className="font-semibold">Folder :</span>
-              <span className="font-bold ml-1">{data.folderName || '_________'}</span>
-            </div>
-            <div className="mt-1">
-              <span className="font-semibold">Print No. :-</span>
-              <span className="ml-1" style={{ fontFamily: 'monospace', fontWeight: 400, fontSize: '1.05em' }}>{data.printNumber || '_________'}</span>
+            <div style={{ width: '100%', padding: '18px 18px' }}>
+              <div className="text-left mt-1">
+                <span className="font-semibold" style={{ fontSize: '1rem' }}>Folder :</span>
+                <span className="font-bold" style={{ fontSize: '1em' }}>{data.folderName || '_________'}</span>
+              </div>
+              <div className="text-left">
+                <span className="font-semibold" style={{ fontSize: '1.em' }}>Print No. :-</span>
+                <span
+                  className=""
+                  style={{
+                    fontFamily: 'monospace',
+                    fontWeight: 700,
+                    fontSize: '1em',
+                    letterSpacing: '0.10em',
+                  }}
+                >
+                  {data.printNumber || '-  -'}
+                </span>
+              </div>
             </div>
           </div>
           <div className="flex flex-row gap-8 w-full justify-end">
@@ -712,6 +727,7 @@ const QuotationForm = ({ addQuotation, quotations, updateQuotation }) => {
                               "Modeling Photo 8x12": 500,
                               "Modeling Photo 10x12": 600,
                               "Modeling Photo 12x15": 800,
+                              "Modeling Photo 12x18": 1000,
                               "Modeling Photo 16x20": 1200,
                               "Modeling Photo 16x24": 1300,
                               "Modeling Photo 20x30": 2200,
@@ -777,6 +793,7 @@ const QuotationForm = ({ addQuotation, quotations, updateQuotation }) => {
                           <option value="Modeling Photo 8x12">Modeling Photo 8x12</option>
                           <option value="Modeling Photo 10x12">Modeling Photo 10x12</option>
                           <option value="Modeling Photo 12x15">Modeling Photo 12x15</option>
+                          <option value="Modeling Photo 12x15">Modeling Photo 12x18</option>
                           <option value="Modeling Photo 16x20">Modeling Photo 16x20</option>
                           <option value="Modeling Photo 16x24">Modeling Photo 16x24</option>
                           <option value="Modeling Photo 20x30">Modeling Photo 20x30</option>
