@@ -793,7 +793,7 @@ const QuotationForm = ({ addQuotation, quotations, updateQuotation }) => {
                           <option value="Modeling Photo 8x12">Modeling Photo 8x12</option>
                           <option value="Modeling Photo 10x12">Modeling Photo 10x12</option>
                           <option value="Modeling Photo 12x15">Modeling Photo 12x15</option>
-                          <option value="Modeling Photo 12x15">Modeling Photo 12x18</option>
+                          <option value="Modeling Photo 12x18">Modeling Photo 12x18</option>
                           <option value="Modeling Photo 16x20">Modeling Photo 16x20</option>
                           <option value="Modeling Photo 16x24">Modeling Photo 16x24</option>
                           <option value="Modeling Photo 20x30">Modeling Photo 20x30</option>
